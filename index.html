@@ -6,7 +6,7 @@
   <title>Адаптивний вебдизайн: HTML і CSS</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light-theme">
   <header>
     <h1>Вітаю у світі WWW!</h1>
     <nav aria-label="Основна навігація">
@@ -14,7 +14,11 @@
       <a href="#semantics">Семантика</a>
       <a href="#responsive">Адаптивність</a>
       <a href="#links">Корисні посилання</a>
+      <a href="#interactive">Інтерактив</a>
     </nav>
+    <p class="toolbar">
+      <button id="theme-toggle" type="button" aria-pressed="false">Змінити тему</button>
+    </p>
   </header>
 
   <main>
@@ -69,10 +73,50 @@
         <li><a href="https://git-scm.com/">Git</a></li>
       </ul>
     </section>
+
+    <section id="interactive" class="card">
+      <h2>Персональне привітання</h2>
+      <p>
+        <label for="visitor-name">Ім’я</label>
+        <input id="visitor-name" type="text">
+      </p>
+      <p id="greeting" aria-live="polite"></p>
+    </section>
+
+    <section id="comments-section" class="card">
+      <h2>Коментарі</h2>
+      <form id="comment-form">
+        <p>
+          <label for="comment-author">Ім’я автора</label>
+          <input id="comment-author" name="author" required>
+        </p>
+        <p>
+          <label for="comment-text">Коментар</label>
+          <textarea id="comment-text" name="comment" rows="3" required></textarea>
+        </p>
+        <button type="submit">Додати</button>
+      </form>
+      <ul id="comments"></ul>
+    </section>
+
+    <section id="html-section" class="card">
+      <h2>Завантаження HTML-фрагмента</h2>
+      <button id="load-html" type="button">Завантажити HTML</button>
+      <p id="html-status" role="status"></p>
+      <div id="html-content"></div>
+    </section>
+
+    <section id="json-section" class="card">
+      <h2>Список із JSON</h2>
+      <button id="load-json" type="button">Завантажити JSON</button>
+      <p id="json-status" role="status"></p>
+      <ul id="json-content"></ul>
+    </section>
   </main>
 
   <footer>
     <p>Навчальна вебсторінка.</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

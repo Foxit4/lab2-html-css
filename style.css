@@ -169,3 +169,69 @@ footer {
     break-inside: avoid;
   }
 }
+
+/* ===== Лабораторна робота №3 ===== */
+.toolbar { text-align: center; margin-block: 0 1rem; }
+
+button {
+  font: inherit;
+  padding: 0.5rem 1rem;
+  border: 1px solid #999;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: darkblue;
+  cursor: pointer;
+}
+button:hover:not(:disabled) { background: #eef3fb; }
+button:disabled { opacity: 0.6; cursor: wait; }
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible { outline: 2px solid darkblue; outline-offset: 2px; }
+
+label { display: block; font-weight: bold; margin-block-end: 0.25rem; }
+input, textarea {
+  font: inherit;
+  width: 100%;
+  max-width: 30rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #999;
+  border-radius: 0.25rem;
+}
+#greeting { font-weight: bold; min-height: 1.6em; }
+[role="status"] { min-height: 1.6em; }
+#comments, #json-content { padding-inline-start: 1.25rem; }
+#comments li { margin-block-end: 0.75rem; }
+#comments p { margin: 0.25rem 0 0; }
+
+/* Теми */
+.light-theme { background-color: #f0f0f0; color: #222; }
+.dark-theme  { background-color: #1a1a1a; color: #f0f0f0; }
+
+.dark-theme h1,
+.dark-theme h2 { color: #8ec5ff; }
+.dark-theme a,
+.dark-theme nav a { color: #8ec5ff; }
+.dark-theme a:hover { color: #ffb3b3; }
+.dark-theme a:focus-visible,
+.dark-theme button:focus-visible,
+.dark-theme input:focus-visible,
+.dark-theme textarea:focus-visible { outline-color: #8ec5ff; }
+.dark-theme nav a { background: #2a2a2a; border-color: #666; }
+.dark-theme .card { background: #262626; border-color: #666; }
+.dark-theme .note { background: #1f2a3a; border-left-color: #8ec5ff; }
+.dark-theme code { background: #3a3a3a; color: #f0f0f0; }
+.dark-theme figcaption,
+.dark-theme footer { color: #ccc; }
+.dark-theme img { border-color: #666; }
+.dark-theme button { background: #2a2a2a; color: #8ec5ff; border-color: #666; }
+.dark-theme button:hover:not(:disabled) { background: #36404f; }
+.dark-theme input,
+.dark-theme textarea { background: #1a1a1a; color: #f0f0f0; border-color: #666; }
+
+@media print {
+  body.light-theme,
+  body.dark-theme { background: white; color: black; }
+  .dark-theme .card { background: white; }
+  .dark-theme h1, .dark-theme h2, .dark-theme a { color: black; }
+  .toolbar { display: none; }
+}
