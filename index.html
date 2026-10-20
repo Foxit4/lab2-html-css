@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Адаптивний вебдизайн: HTML і CSS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Вітаю у світі WWW!</h1>
+    <nav aria-label="Основна навігація">
+      <a href="#intro">Про сторінку</a>
+      <a href="#semantics">Семантика</a>
+      <a href="#responsive">Адаптивність</a>
+      <a href="#links">Корисні посилання</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro" class="card">
+      <h2>Про сторінку</h2>
+      <p>Це навчальна сторінка про адаптивний вебдизайн. Вона створена
+        в межах лабораторної роботи №2 і показує, як HTML задає структуру,
+        а CSS відповідає за оформлення та пристосування до різних екранів.</p>
+      <ul>
+        <li>Структурування вмісту засобами HTML.</li>
+        <li>Оформлення кольорів, шрифтів, відступів і меж у CSS.</li>
+        <li>Адаптація компонування за допомогою медіазапитів.</li>
+      </ul>
+      <figure>
+        <img src="illustration.jpg" width="1200" height="600"
+             alt="Схематичне зображення настільного монітора, планшета та смартфона з однаковою сторінкою різної ширини">
+        <figcaption>Одна й та сама сторінка на екранах різної ширини.</figcaption>
+      </figure>
+    </section>
+
+    <section id="semantics" class="card">
+      <h2>Семантичні елементи</h2>
+      <p>Семантичні теги повідомляють браузеру й допоміжним технологіям
+        про призначення частин документа.</p>
+      <ol>
+        <li><code>header</code> — вступна частина сторінки.</li>
+        <li><code>nav</code> — блок навігації.</li>
+        <li><code>main</code> — основний вміст.</li>
+        <li><code>section</code> — тематичний розділ із заголовком.</li>
+        <li><code>footer</code> — підсумкова частина.</li>
+      </ol>
+      <p class="note">Елемент <code>div</code> доречний лише для технічного
+        групування, коли жоден семантичний тег не підходить.</p>
+    </section>
+
+    <section id="responsive" class="card">
+      <h2>Адаптивність</h2>
+      <p>Текст і контейнери задаються у відносних одиницях (<code>rem</code>,
+        <code>%</code>), а зображення масштабується разом із контейнером.
+        Точка переходу обрана там, де вузький екран потребує інших
+        відступів і розміру заголовка.</p>
+      <p>Спробуйте змінити ширину вікна браузера або відкрити режим
+        емуляції мобільних пристроїв у DevTools.</p>
+    </section>
+
+    <section id="links" class="card">
+      <h2>Корисні посилання</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Документація MDN: HTML</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Документація MDN: CSS</a></li>
+        <li><a href="https://validator.w3.org/">Валідатор W3C</a></li>
+        <li><a href="https://git-scm.com/">Git</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Навчальна вебсторінка.</p>
+  </footer>
+</body>
+</html>
